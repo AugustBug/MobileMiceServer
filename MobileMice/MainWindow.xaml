@@ -1,0 +1,20 @@
+﻿<Window x:Class="MobileMice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mobil Fare" Height="190" Width="310" Loaded="Window_Loaded" Closing="Window_Closing" Icon="remote_control_bnd_icon.ico">
+    <Grid Margin="0,0,0,0">
+        <StackPanel >
+            <StackPanel Orientation="Horizontal">
+                <Label Content="IP: " FontWeight="Bold" Width="30" Margin="5,0,0,0"/>
+                <Label Name="lblIp" Content="" Width="160" Margin="0,0,10,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ListView Name="lvConsole" Width="240" Height="105" Margin="10,10,10,10" FontSize="8pt" Background="Beige"/>
+                <StackPanel>
+                    <Label Content="Hız" FontWeight="Bold"></Label>
+                    <Slider Name="slidCoef" Orientation="Vertical" Height="90" Maximum="1" Minimum="0.05" Value="0.3" ValueChanged="slidCoef_ValueChanged"></Slider>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
